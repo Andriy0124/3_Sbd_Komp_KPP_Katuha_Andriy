@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Камінь, Ножиці, Папір</title>
+  <link rel="stylesheet" href="style.css"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Камінь, Ножиці, Папір</h1>
+    <div class="mode-buttons">
+      <button onclick="showSinglePlayerMode()">Одиночний Режим</button>
+      <button onclick="showTournamentMode()">Турнірний Режим</button>
+    </div>
+
+    <div id="single-player-mode" class="hidden">
+      <div class="choice-buttons">
+        <button class="choice-button" data-choice="камінь" onclick="playGame('камінь')">Камінь</button>
+        <button class="choice-button" data-choice="папір" onclick="playGame('папір')">Папір</button>
+        <button class="choice-button" data-choice="ножиці" onclick="playGame('ножиці')">Ножиці</button>
+      </div>
+      <div class="scoreboard">
+        <p>Перемоги гравця: <span id="player-wins">0</span></p>
+        <p>Перемоги комп’ютера: <span id="computer-wins">0</span></p>
+        <p>Нічії: <span id="draws">0</span></p>
+      </div>
+      <div id="result" class="result">Зробіть свій вибір.</div>
+    </div>
+
+    <div id="tournament-mode" class="hidden">
+      <h3>Турнірний режим</h3>
+      <div class="choice-buttons">
+        <button class="choice-button" data-choice="камінь" onclick="playTournament('камінь')">Камінь</button>
+        <button class="choice-button" data-choice="папір" onclick="playTournament('папір')">Папір</button>
+        <button class="choice-button" data-choice="ножиці" onclick="playTournament('ножиці')">Ножиці</button>
+      </div>
+      <div class="tournament-score">
+        <p>Перемоги в турнірі гравця: <span id="tournament-player-wins">0</span></p>
+        <p>Перемоги комп’ютера в турнірі: <span id="tournament-computer-wins">0</span></p>
+        <p id="tournament-result" class="result">Зробіть свій вибір.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ff6b81, #ffd93d);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 30px;
+  width: 70%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.mode-buttons {
+  margin-bottom: 30px;
+}
+
+.mode-buttons button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  border-radius: 10px;
+  border: none;
+  background: #ff6b81;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mode-buttons button:hover {
+  background: #ffd93d;
+}
+
+.choice-buttons {
+  margin-top: 20px;
+}
+
+.choice-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.choice-button:hover {
+  background: #ff6b81;
+  color: white;
+  transform: scale(1.1);
+}
+
+.scoreboard {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.scoreboard p {
+  margin: 5px 0;
+}
+
+.result {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.tournament-score {
+  margin-top: 40px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
